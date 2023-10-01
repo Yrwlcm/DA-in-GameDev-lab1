@@ -38,9 +38,9 @@
 Установить необходимое программное обеспечение, которое пригодится для создания интеллектуальных моделей на Python. Рассмотреть процесс установки игрового движка Unity для разработки игр.
 
 ## Задание 1
-### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
+### Написать программу Hello World на Python с запуском в Jupiter Notebook.
 Ход работы:
-- Скачать дистрибутив анаконды с сайта anaconda.com.
+- Скачать дистрибутив анаконды с сайта anaconda.com
 - Открыть Anaconda.Navigator
 - Открыть Jupyter Notebook
 - Создать новый файл HelloWorld.ipynb
@@ -54,64 +54,47 @@ print('Hello World')
 ![image](https://github.com/Yrwlcm/DA-in-GameDev-lab1/assets/99079920/a1c1a877-7cdd-4e8a-87f7-ab5707ada16f)
 
 ## Задание 2
-### Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
+### Написать программу Hello World на C# с запуском на Unity. 
 
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
+Ход работы:
+- Скачать установщик Unity с сайта unity.com
+- Регестрируем аккаунт
+- Создаем новый пустой проект
+- Создаем новый обьект Ui -> Text - TextMashPro с текстом Hello World
+![image](https://github.com/Yrwlcm/DA-in-GameDev-lab1/assets/99079920/31c16656-27eb-47c7-82a9-d2787ea33ea4)
+- Создаем новый скрипт с названием HelloWorldScript
+- Внутрь скрипта пишем
+``` C#
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-```py
-
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
-
+public class HelloWorldScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("Hello world!");
+    }
+}
 ```
+- Привязываем его к обьекту Canvas
+![image](https://github.com/Yrwlcm/DA-in-GameDev-lab1/assets/99079920/99f4ad08-3f28-4b35-8e32-0d6b4593fd57)
+
+- Теперь при запуске программы на экране будет надпись Hello World и в консоль будет выведено Hello World
+![image](https://github.com/Yrwlcm/DA-in-GameDev-lab1/assets/99079920/6e320b91-e4c3-4716-8e3e-6de24ca6a482)
 
 ## Задание 3
-### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
+### Оформить отчет в виде документации на github (markdown-разметка).
 
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
-
-```py
-
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
-
-```
+- Открыть репозиторий с лабораторной работой
+- Создать его клон с помощью Fork
+- Оформить отчет
 
 ## Выводы
 
-Абзац умных слов о том, что было сделано и что было узнано.
+В ходе этой лабораторной работой, я установил Anaconda и Unity на свой ПК и познакомился с основами работы с ними.
 
 | Plugin | README |
 | ------ | ------ |
